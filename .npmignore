@@ -1,0 +1,6 @@
+.github/
+docs/
+test/
+tools/
+*.ndjson
+*.log

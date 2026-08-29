@@ -1,0 +1,25 @@
+{
+  "name": "relayfault",
+  "version": "1.0.0",
+  "description": "Deterministic local HTTP fault-injection proxy for retry and resilience testing",
+  "type": "module",
+  "bin": {
+    "relayfault": "./src/cli.js"
+  },
+  "scripts": {
+    "check": "node --check src/cli.js && node --check src/proxy.js && node --check src/scenario.js && node --check tools/run_demo.js && node --check examples/upstream.js",
+    "test": "node --test",
+    "demo": "node tools/run_demo.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "fault-injection",
+    "proxy",
+    "resilience",
+    "testing"
+  ]
+}

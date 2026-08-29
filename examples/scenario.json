@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "name": "first two payment attempts fail",
+      "match": {
+        "method": "POST",
+        "path": "/payments"
+      },
+      "when": {
+        "requests": [1, 2]
+      },
+      "action": {
+        "type": "respond",
+        "status": 503,
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "retry-after": "1"
+        },
+        "body": "{\"error\":\"temporary payment outage\"}\n"
+      }
+    },
+    {
+      "name": "every third catalog read is slow",
+      "match": {
+        "method": "GET",
+        "path": "/catalog*"
+      },
+      "when": {
+        "every": 3
+      },
+      "action": {
+        "type": "delay",
+        "milliseconds": 150,
+        "jitterMilliseconds": 25
+      }
+    }
+  ],
+  "defaultAction": {
+    "type": "forward"
+  }
+}
