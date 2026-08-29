@@ -129,6 +129,8 @@ The remote-target option exists for controlled staging tests. Confirm authorizat
 
 The project uses Node's built-in test runner with real ephemeral HTTP servers. Local verification on Node.js 26.5.0 covers scenario validation, ordered rule selection, seeded probability and jitter, forwarding, synthetic responses, delay, disconnect, body limits, hop headers, status counters, event recording, target safety, and CLI failures.
 
+[GitHub Actions run 33244285752](https://github.com/Ikteder/relayfault/actions/runs/33244285752) passed the complete suite, demo, syntax checks, and package dry run on Node.js 22, 24, and 26.
+
 Run all checks with:
 
 ```bash

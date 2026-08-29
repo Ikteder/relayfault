@@ -39,4 +39,12 @@ The demo proves the intended stateful sequence through local HTTP sockets. It do
 
 ## Public verification
 
-The public CI matrix result will be appended after the repository is created and the exact run is verified.
+[GitHub Actions run 33244285752](https://github.com/Ikteder/relayfault/actions/runs/33244285752) passed at commit `abde007625c042aa95536b9e615d9f29305852ad`.
+
+| Public job | Result |
+|---|---|
+| Node.js 22 | Success |
+| Node.js 24 | Success |
+| Node.js 26 | Success |
+
+Each job ran package installation, syntax checks, all 18 tests, the deterministic demo, and the package dry run.
